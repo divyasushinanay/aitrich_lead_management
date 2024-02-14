@@ -20,9 +20,10 @@ body {
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
-    left: 250px;
+    top: 30px;
+    left: 300px;
     width: 0;
-    height: 100%;
+    height: 92%;
     margin-left: -250px;
     overflow-y: auto;
     background: #f5f5f5;
@@ -52,7 +53,7 @@ body {
 
 .sidebar-nav {
     position: absolute;
-    top: 0;
+    top: 100px;
     width: 250px;
     margin: 0;
     padding: 0;
@@ -62,13 +63,14 @@ body {
 .sidebar-nav li {
     text-indent: 20px;
     line-height: 40px;
+    
 }
 
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
     color:black;
-    font-weight: 100;
+    font-weight: bold;
     
 }
 
