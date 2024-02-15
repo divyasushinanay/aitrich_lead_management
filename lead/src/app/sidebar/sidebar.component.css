@@ -1,9 +1,9 @@
-
+ 
 body {
     overflow-x: hidden;
  }
 
-/* Toggle Styles */
+
 
 #wrapper {
     padding-left: 0;
@@ -49,7 +49,7 @@ body {
     margin-right: -250px;
 }
 
-/* Sidebar Styles */
+
 
 .sidebar-nav {
     position: absolute;
@@ -126,4 +126,6 @@ body {
         position: relative;
         margin-right: 0;
     }
-}
+} 
+
+
