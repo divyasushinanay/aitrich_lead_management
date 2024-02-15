@@ -12,8 +12,8 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.RenderChart('myChart1', 'line', ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'], [12, 19, 3, 5, 2, 3]);
     this.RenderChart('myChart2', 'bar', ['A', 'B', 'C', 'D', 'E'], [10, 20, 30, 40, 50]);
-    this.RenderChart('myChart3', 'bar', ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'], [12, 19, 3, 5, 2, 3]);
-    this.RenderChart('myChart4', 'line', ['A', 'B', 'C', 'D', 'E'], [10, 20, 30, 40, 50]);
+    // this.RenderChart('myChart3', 'bar', ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'], [12, 19, 3, 5, 2, 3]);
+    // this.RenderChart('myChart4', 'line', ['A', 'B', 'C', 'D', 'E'], [10, 20, 30, 40, 50]);
   }
 
   RenderChart(id: string, chartType: keyof ChartTypeRegistry, labels: string[], data: number[]) {
