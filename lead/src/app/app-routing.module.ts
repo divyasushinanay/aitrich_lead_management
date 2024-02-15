@@ -7,12 +7,13 @@ import { UsermanagementComponent } from './usermanagement/usermanagement.compone
 
 const routes: Routes = [
   {path:'',component:DashboardComponent},
+ 
  {path:'dashboard',component:DashboardComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'Profile', component: ProfileComponent},
 
-  {path:'usermanagement', component:UsermanagementComponent}
-  
+  {path:'usermanagement', component:UsermanagementComponent},
+
 
 ];
 

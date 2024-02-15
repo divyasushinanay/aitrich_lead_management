@@ -1,76 +1,78 @@
 <section class="vh-100">
-  <div class="container h-100 overflow-container"> <!-- Add overflow-container class here -->
+  <div class="container h-100 overflow-container"> 
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-lg-12 col-xl-11">
-        <div class="card text-black" style="border-radius: 25px;">
+        <div class="card text-black" style="border-radius: 25px; ">
           <div class="card-body p-md-5">
             <div class="row justify-content-center">
               <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
                 <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Register Now</p>
 
-                <form class="mx-1 mx-md-4">
 
+                  <!-- <form class="mx-1 mx-md-4  "> -->
+                  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+                   
                   <div class="form-group">
                     <label for="firstName">First Name</label>
-                    <input type="text" id="firstName" class="form-control">
+                    <input type="text" id="firstName" class="form-control" formControlName="firstName">
                   </div>
 
                   <div class="form-group">
                     <label for="lastName">Last Name</label>
-                    <input type="text" id="lastName" class="form-control">
+                    <input type="text" id="lastName" class="form-control" formControlName="lastName">
                   </div>
 
                   <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" class="form-control">
+                    <input type="email" id="email" class="form-control" formControlName="email">
                   </div>
 
                   <div class="form-group">
                     <label for="phoneNumber">Phone Number</label>
-                    <input type="tel" id="phoneNumber" class="form-control">
+                    <input type="tel" id="phoneNumber" class="form-control" formControlName="phone">
                   </div>
 
                   <div class="form-group">
                     <label for="address">Address</label>
-                    <input type="text" id="address" class="form-control">
+                    <input type="text" id="address" class="form-control" formControlName="address">
                   </div>
 
                   <div class="form-group">
                     <label for="location">Location</label>
-                    <input type="text" id="location" class="form-control">
+                    <input type="text" id="location" class="form-control" formControlName="location">
                   </div>
 
                   <div class="form-group">
                     <label for="city">City</label>
-                    <input type="text" id="city" class="form-control">
+                    <input type="text" id="city" class="form-control" formControlName="city">
                   </div>
 
                   <div class="form-group">
                     <label for="country">Country</label>
-                    <input type="text" id="country" class="form-control">
+                    <input type="text" id="country" class="form-control" formControlName="country">
                   </div>
 
                   <div class="form-group">
                     <label for="age">Age</label>
-                    <input type="number" id="age" class="form-control">
+                    <input type="number" id="age" class="form-control" formControlName="age">
                   </div>
 
                   <div class="form-group">
                     <label for="gender">Gender</label>
                     <div>
-                      <input type="radio" id="male" name="gender" value="male">
+                      <input type="radio" id="male" name="gender" value="male" formControlName="male">
                       <label for="male">Male</label>
                     </div>
                     <div>
-                      <input type="radio" id="female" name="gender" value="female">
+                      <input type="radio" id="female" name="gender" value="female" formControlName="female">
                       <label for="female">Female</label>
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" class="form-control">
+                    <input type="password" id="password" class="form-control" formControlName="password">
                   </div>
 
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
@@ -91,3 +93,7 @@
     </div>
   </div>
 </section>
+
+
+
+

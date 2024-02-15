@@ -9,7 +9,9 @@ import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UsermanagementComponent } from './usermanagement/usermanagement.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { AddusermodalComponent } from './addusermodal/addusermodal.component';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,14 +19,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DashboardComponent,
     RegisterComponent,
     ProfileComponent,
-    UsermanagementComponent
+    UsermanagementComponent,
+    AddusermodalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule, 
+    ReactiveFormsModule,
+   
   ],
-  providers: [],
+  providers: [
+    MatDialog
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
