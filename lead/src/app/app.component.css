@@ -1,8 +1,11 @@
 .fulll {
-    background-color: #debacc;
-    width: 100%;
-  }
-  
-  .mainsection {
-    padding-left: 20px; /* Adjust this value as needed for the desired gap */
-  }
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #ffffff 0%, #5899e2 74%);
+
+  width: 100%;
+}
+
+.mainsection {
+  padding-left: 20px;
+  /* Adjust this value as needed for the desired gap */
+}
