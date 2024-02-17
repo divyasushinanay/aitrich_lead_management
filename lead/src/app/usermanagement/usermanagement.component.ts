@@ -1,5 +1,6 @@
 import { Component ,OnInit} from '@angular/core';
 import { UserregisterService } from '../services/userregister.service';
+import { User } from '../models/adduser';
 
 @Component({
   selector: 'app-usermanagement',
@@ -7,14 +8,13 @@ import { UserregisterService } from '../services/userregister.service';
   styleUrls: ['./usermanagement.component.css']
 })
 export class UsermanagementComponent implements OnInit {
-  userData: any[] = [];
+  userData: User  | any
 
   constructor(private userRegisterService: UserregisterService) { }
 
   ngOnInit(): void {
-    // this.userRegisterService.getData().subscribe(data => {
-    //   console.log(data); // or do something with the data
-    //   this.userData=data;
-    // });
+    this.userRegisterService.getuser().subscribe(data => {
+      this.userData=data;
+    });
   }
 }

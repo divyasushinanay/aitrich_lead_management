@@ -1,116 +1,259 @@
 <section class="vh-100">
-  <div class="container h-100 overflow-container"> 
+  <div class="container h-100 overflow-container">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-lg-12 col-xl-12">
-        <div class="card text-black" style="border-radius: 25px;height: 650px; ">
+        <div class="card text-black" style="border-radius: 25px; height: 650px">
           <div class="card-body p-md-5">
             <div class="row justify-content-center">
               <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
+                  Add User
+                </p>
 
-                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Add User</p>
-
-
-                 
-
-                <form  [formGroup]="userForm">
+                <form [formGroup]="userForm">
                   <div class="row">
-
                     <!-- First column -->
                     <div class="col-xl-6">
-                  
-                      <div class="d-flex flex-column align-items-center mb-4">
-  <div class="form-group form-outline mb-0">
-    <label class="form-label" for="firstName"style="font-weight: bold;">First Name:</label>
-    <input type="text" id="firstName" class="form-control" formControlName="firstName" style="width: 300px;margin-right: 450px;">
-    <span style="color:red" *ngIf="userForm.get('firstName')?.touched && userForm.get('firstName')?.invalid"> firstname is required</span>  
-  </div>
-</div> 
-   
                       <div class="d-flex flex-column align-items-center mb-4">
                         <div class="form-group form-outline mb-0">
-                          <label class="form-label" for="lastname"style="font-weight: bold;">Last Name:</label>
-                          <input type="text" id="lastname" class="form-control" formControlName="lastName" style="width: 300px;margin-right: 450px;">
-                          <span style="color:red" *ngIf="userForm.get('lastName')?.touched && userForm.get('lastName')?.invalid"> lastname is required</span>  
+                          <label
+                            class="form-label"
+                            for="firstName"
+                            style="font-weight: bold"
+                            >First Name:</label
+                          >
+                          <input
+                            type="text"
+                            id="firstName"
+                            class="form-control"
+                            formControlName="firstName"
+                            style="width: 300px; margin-right: 450px"
+                          />
+                          <span
+                            style="color: red"
+                            *ngIf="
+                              userForm.get('firstName')?.touched &&
+                              userForm.get('firstName')?.invalid
+                            "
+                          >
+                            firstname is required</span
+                          >
                         </div>
                       </div>
-  
+
                       <div class="d-flex flex-column align-items-center mb-4">
                         <div class="form-group form-outline mb-0">
-                          <label class="form-label" for="email"style="font-weight: bold;">Email:</label>
-                          <input type="text" id="email" class="form-control" formControlName="email" style="width: 300px;margin-right: 450px;">
-                          <span style="color:red" *ngIf="userForm.get('email')?.touched && userForm.get('email')?.invalid"> Email is required</span>  
+                          <label
+                            class="form-label"
+                            for="lastname"
+                            style="font-weight: bold"
+                            >Last Name:</label
+                          >
+                          <input
+                            type="text"
+                            id="lastname"
+                            class="form-control"
+                            formControlName="lastName"
+                            style="width: 300px; margin-right: 450px"
+                          />
+                          <span
+                            style="color: red"
+                            *ngIf="
+                              userForm.get('lastName')?.touched &&
+                              userForm.get('lastName')?.invalid
+                            "
+                          >
+                            lastname is required</span
+                          >
                         </div>
                       </div>
-  
+
                       <div class="d-flex flex-column align-items-center mb-4">
                         <div class="form-group form-outline mb-0">
-                          <label class="form-label" for="phonenumber"style="font-weight: bold;">Phone Number:</label>
-                          <input type="text" id="phonenumber" class="form-control" formControlName="phoneNumber" style="width: 300px;margin-right: 450px;">
-                          <span style="color:red" *ngIf="userForm.get('lastName')?.touched && userForm.get('lastName')?.invalid">phone number required</span>  
+                          <label
+                            class="form-label"
+                            for="email"
+                            style="font-weight: bold"
+                            >Email:</label
+                          >
+                          <input
+                            type="text"
+                            id="email"
+                            class="form-control"
+                            formControlName="email"
+                            style="width: 300px; margin-right: 450px"
+                          />
+                          <span
+                            style="color: red"
+                            *ngIf="
+                              userForm.get('email')?.touched &&
+                              userForm.get('email')?.invalid
+                            "
+                          >
+                            Email is required</span
+                          >
+                        </div>
+                      </div>
+
+                      <div class="d-flex flex-column align-items-center mb-4">
+                        <div class="form-group form-outline mb-0">
+                          <label
+                            class="form-label"
+                            for="phonenumber"
+                            style="font-weight: bold"
+                            >Phone Number:</label
+                          >
+                          <input
+                            type="text"
+                            id="phonenumber"
+                            class="form-control"
+                            formControlName="phoneNumber"
+                            style="width: 300px; margin-right: 450px"
+                          />
+                          <span
+                            style="color: red"
+                            *ngIf="
+                              userForm.get('lastName')?.touched &&
+                              userForm.get('lastName')?.invalid
+                            "
+                            >phone number required</span
+                          >
                         </div>
                       </div>
                     </div>
-  
+
                     <!-- Second column -->
                     <div class="col-lg-6">
                       <div class="d-flex flex-column align-items-center mb-4">
                         <div class="form-group form-outline mb-0">
-                          <label class="form-label" for="address"style="font-weight: bold;">Address:</label>
-                          <input type="text" id="address" class="form-control" formControlName="address" style="width: 300px;">
-                          <span style="color:red" *ngIf="userForm.get('address')?.touched && userForm.get('address')?.invalid">Address is required</span>  
+                          <label
+                            class="form-label"
+                            for="address"
+                            style="font-weight: bold"
+                            >Address:</label
+                          >
+                          <input
+                            type="text"
+                            id="address"
+                            class="form-control"
+                            formControlName="address"
+                            style="width: 300px"
+                          />
+                          <span
+                            style="color: red"
+                            *ngIf="
+                              userForm.get('address')?.touched &&
+                              userForm.get('address')?.invalid
+                            "
+                            >Address is required</span
+                          >
                         </div>
                       </div>
-  
+
                       <div class="d-flex flex-column align-items-center mb-4">
                         <div class="form-group form-outline mb-0">
-                          <label class="form-label" for="location"style="font-weight: bold;">Location:</label>
-                          <input type="text" id="location" class="form-control" formControlName="location" style="width: 300px;">
-                          <span style="color:red" *ngIf="userForm.get('location')?.touched && userForm.get('location')?.invalid">Location is required</span>  
+                          <label
+                            class="form-label"
+                            for="location"
+                            style="font-weight: bold"
+                            >Location:</label
+                          >
+                          <input
+                            type="text"
+                            id="location"
+                            class="form-control"
+                            formControlName="location"
+                            style="width: 300px"
+                          />
+                          <span
+                            style="color: red"
+                            *ngIf="
+                              userForm.get('location')?.touched &&
+                              userForm.get('location')?.invalid
+                            "
+                            >Location is required</span
+                          >
                         </div>
                       </div>
-  
+
                       <div class="d-flex flex-column align-items-center mb-4">
                         <div class="form-group form-outline mb-0">
-                          <label class="form-label" for="dateofbirth"style="font-weight: bold;">Date Of Birth:</label>
-                          <input type="date"style="width: 300px;" id="dateofbirth" class="form-control" formControlName="dateofBirth">
-                          <span style="color:red" *ngIf="userForm.get('dateofBirth')?.touched && userForm.get('dateofBirth')?.invalid">dateofBirth is required</span>  
+                          <label
+                            class="form-label"
+                            for="dateofbirth"
+                            style="font-weight: bold"
+                            >Date Of Birth:</label
+                          >
+                          <input
+                            type="date"
+                            style="width: 300px"
+                            id="dateofbirth"
+                            class="form-control"
+                            formControlName="dateofBirth"
+                          />
+                          <span
+                            style="color: red"
+                            *ngIf="
+                              userForm.get('dateofBirth')?.touched &&
+                              userForm.get('dateofBirth')?.invalid
+                            "
+                            >dateofBirth is required</span
+                          >
                         </div>
                       </div>
-  
+
                       <div class="d-flex flex-column align-items-center mb-4">
                         <div class="form-group form-outline mb-0">
-                          <label class="form-label" for="gender"style="font-weight: bold;">Gender:</label>
-                          <div style="display: flex;width: 300px;">
-                            <input type="radio">
-                            <p style="margin-left: 10px;margin-top: 15px;">Male</p>
-                            <input type="radio" style="margin-left: 20px;">
-                            <p style="margin-left: 10px;margin-top: 15px;">Female</p>
-                            <input type="radio" style="margin-left: 20px;">
-                            <p style="margin-left: 10px;margin-top: 15px;">Other</p>  
+                          <label
+                            class="form-label"
+                            for="gender"
+                            style="font-weight: bold"
+                            >Gender:</label
+                          >
+                          <div style="display: flex; width: 300px">
+                            <input type="radio" formControlName="gender" value="male" />
+                            <p style="margin-left: 10px; margin-top: 15px">
+                              Male
+                            </p>
+                            <input type="radio" style="margin-left: 20px"  formControlName="gender" value="female" />
+                            <p style="margin-left: 10px; margin-top: 15px">
+                              Female
+                            </p>
+                            <input type="radio" style="margin-left: 20px"  formControlName="gender" value="other"/>
+                            <p style="margin-left: 10px; margin-top: 15px">
+                              Other
+                            </p>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
 
-               
-
                   <div class="row">
-                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4 col-lg-2">
-                      <button type="button" class="btn btn-primary btn-lg" (click)="onSubmit()">Save</button>
+                    <div
+                      class="d-flex justify-content-center mx-4 mb-3 mb-lg-4 col-lg-2"
+                    >
+                      <button
+                        type="button"
+                        class="btn btn-primary btn-lg"
+                        (click)="onSubmit()"
+                      >
+                        Save
+                      </button>
                     </div>
-                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4 col-lg-2">
-                      <button type="button" class="btn btn-danger btn-lg" routerLink="/usermanagement" >Back</button>
-                      
+                    <div
+                      class="d-flex justify-content-center mx-4 mb-3 mb-lg-4 col-lg-2"
+                    >
+                      <button
+                        type="button"
+                        class="btn btn-danger btn-lg"
+                        routerLink="/usermanagement"
+                      >
+                        Back
+                      </button>
                     </div>
-
-                  
                   </div>
                 </form>
-                
-
-               
-
               </div>
               <!-- <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
                 <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
@@ -123,7 +266,3 @@
     </div>
   </div>
 </section>
-
-
-
-
