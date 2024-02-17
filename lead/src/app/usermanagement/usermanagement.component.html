@@ -57,32 +57,42 @@
             <div class="table-container" style="max-height: 400px; overflow-y: auto;">
               <table class="table">
                 <thead>
-                  <tr>
+                  <!-- <tr>
                     <th>First Name</th>
-                    <th>Address</th>
-                    <th>Location</th>
-                    <th>Country</th>
-                    <th>Age</th>
-                    <th>Gender</th>
-                    <th>Username</th>
-                    <th>Actions</th>
+                    <th>lastName</th>
+                    <th>email</th>
+                    <th>phoneNumber</th>
+                    <th>address</th>
+                    <th>location</th>
+                    <th>gender</th>
+                    <th>dateofbirth</th>
+                  </tr> -->
+
+                  <tr *ngFor="let user of userData">
+                    <td>{{user.firstname }}</td>
+                    <td>{{ user.lastName }}</td>
+                    <td>{{ user.email }}</td>
+                    <!-- display other user information -->
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>John</td>
-                    <td>123 Main St</td>
-                    <td>New York</td>
-                    <td>USA</td>
-                    <td>30</td>
-                    <td>Male</td>
-                    <td>john_doe</td>
-                    <td>
+                  
+
+                      <!-- <tr *ngFor="let user of userData">
+                        <td>{{ user.firstName }}</td>
+                        <td>{{ user.lastName }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.phoneNumber }}</td>
+                        <td>{{ user.address }}</td>
+                        <td>{{ user.location }}</td>
+                        <td>{{ user.gender }}</td>
+                        
+                      
                       <button class="btn btn-primary btn-sm mr-2">Edit</button>
                       <button class="btn btn-danger btn-sm">Delete</button>
-                    </td>
-                  </tr>
-                  <tr>
+                    
+                  </tr> -->
+                  <!-- <tr>
                     <td>Vikram</td>
                     <td>123 Main St</td>
                     <td>New York</td>
@@ -95,7 +105,8 @@
                       <button class="btn btn-danger btn-sm">Delete</button>
                     </td>
                   </tr>
-                  <tr>
+                  <tr> -->
+                    <tr>
                     <td>JACK</td>
                     <td>123 Main St</td>
                     <td>New York</td>
@@ -107,7 +118,7 @@
                       <button class="btn btn-primary btn-sm mr-2">Edit</button>
                       <button class="btn btn-danger btn-sm">Delete</button>
                     </td>
-                  </tr>
+                  </tr> 
                   <!-- Add more rows as needed -->
                 </tbody>
               </table>
