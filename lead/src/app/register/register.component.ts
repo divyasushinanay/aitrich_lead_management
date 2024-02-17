@@ -1,5 +1,5 @@
 import { UserregisterService } from './../services/userregister.service';
-import { Component,OnInit } from '@angular/core';
+import { Component,OnInit,ElementRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators,FormControl,RequiredValidator } from '@angular/forms';
 import { User } from '../models/adduser';
 @Component({
@@ -35,26 +35,41 @@ export class RegisterComponent implements OnInit {
 
     }
 
- onSubmit() {
-          if (this.userForm.valid) {
+//  onSubmit() {
+//           if (this.userForm.valid) {
 
-            console.log(this.userForm.value);
-          } else {
+//             console.log(this.userForm.value);
             
-            console.log('Form is invalid');
-          }
-        }
-        resetForm(){
+//           } else {
+            
+//             console.log('Form is invalid');
+//           }
+//         }
+//         resetForm(){
 
-this.userForm.reset();
+// this.userForm.reset();
 
-        }
+//         }
+
+onSubmit(){
+  if(this.userForm.valid){
+    const formData=this.userForm.value;
+    this.userRegisterService.adduser(formData).subscribe(
+      (response) =>{console.log(response)
+      
+      }
+    )
+  }
+
+}
+
+
 
 
 // onSubmit() {
 //   if (this.userForm.valid) {
 //     const userData: User = this.userForm.value;
-//     this.userRegisterService.setUserData(userData);
+//     this.userRegisterService.adduser(userData);
 //     this.userForm.reset();
 //   } else {
 //     console.log('Form is invalid');
