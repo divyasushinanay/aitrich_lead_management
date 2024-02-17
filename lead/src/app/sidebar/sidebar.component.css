@@ -76,10 +76,8 @@ body {
 
 .sidebar-nav li a:hover {
     text-decoration: none;
-    color: #e4e4f4;
-    background: #0810ef;
-    width: 150px;
-    height: 40px;
+    color: white;
+    background: #5899e2;
     border-radius: 20px;
     font-size: larger;
     text-align: justify;
