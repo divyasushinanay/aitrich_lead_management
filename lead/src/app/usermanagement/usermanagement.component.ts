@@ -5,16 +5,31 @@ import { User } from '../models/adduser';
 @Component({
   selector: 'app-usermanagement',
   templateUrl: './usermanagement.component.html',
-  styleUrls: ['./usermanagement.component.css']
+  styleUrls: ['./usermanagement.component.css'],
 })
 export class UsermanagementComponent implements OnInit {
-  userData: User  | any
+  userData: User | any;
 
-  constructor(private userRegisterService: UserregisterService) { }
+  constructor(private userRegisterService: UserregisterService) {}
 
   ngOnInit(): void {
-    this.userRegisterService.getuser().subscribe(data => {
-      this.userData=data;
-    });
+    this.getUser()
+   
+  }
+
+  getUser(){
+     this.userRegisterService.getuser().subscribe((data) => {
+       this.userData = data;
+     });
+
+  }
+
+  // Removing User
+  deleteUser(id: string){
+    this.userRegisterService.removeuser(id).subscribe((res) => {
+      this.getUser()
+      console.log('User Deleted');
+      
+    })
   }
 }

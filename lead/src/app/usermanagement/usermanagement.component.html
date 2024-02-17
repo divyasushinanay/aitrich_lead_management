@@ -48,24 +48,9 @@
                     <td>{{ user.gender }}</td>
                     <td>
                       <button class="btn btn-primary btn-sm mr-2">Edit</button>
-                      <button class="btn btn-danger btn-sm">Delete</button>
+                      <button class="btn btn-danger btn-sm" (click)="deleteUser(user.id)">Delete</button>
                     </td>
-                    <!-- display other user information -->
                   </tr>
-                    <!-- <tr>
-                    <td>JACK</td>
-                    <td>hill</td>
-                    <td>jack.com</td>
-                    <td>1234567890</td>
-                    <td>123 Main St</td>
-                    <td>USA</td>
-                    <td>Male</td>
-                    <td>
-                      <button class="btn btn-primary btn-sm mr-2">Edit</button>
-                      <button class="btn btn-danger btn-sm">Delete</button>
-                    </td>
-                  </tr> 
-                  Add more rows as needed -->
                 </tbody>
               </table>
             </div>

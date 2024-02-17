@@ -8,5 +8,6 @@ export interface User {
     location: string;
     dateOfBirth: Date;
     gender: string;
+    id: string
   }
   

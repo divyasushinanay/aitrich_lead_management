@@ -21,5 +21,7 @@ export class UserregisterService {
     return this.http.get(`${this.baseUrl}/users`);
   }
 
-  removeuser() {}
+  removeuser(id: string) {
+    return this.http.delete(`${this.baseUrl}/users/${id}`)
+  }
 }
