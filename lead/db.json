@@ -1,20 +1,15 @@
 {
-    "users":[
-        {
-            "id":"1",
-            "firstdName":"bank of baroda_silvercard",
-            "lastName":"bank of baroda",
-            "email":"the best bank provide full customer care",
-            "address":"67",
-            "phonenumber":"true",
-            "dateofbirth":"45500",
-            "location":"34",
-            "gender":"233"
-            
-            
-        }
-        
-        
-        
-        
-        ]}
+  "users": [
+    {
+      "id": "f50a",
+      "firstName": "Mohammed",
+      "lastName": "Faheem",
+      "email": "user@gmail.com",
+      "phoneNumber": "78965236",
+      "address": "abc",
+      "dateofBirth": "2024-02-08",
+      "location": "RERTERT",
+      "gender": "male"
+    }
+  ]
+}

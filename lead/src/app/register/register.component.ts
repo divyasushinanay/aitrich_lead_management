@@ -10,6 +10,7 @@ import { User } from '../models/adduser';
 export class RegisterComponent implements OnInit {
 
   userForm!: FormGroup;
+  user: User | any
 
  
 
@@ -55,7 +56,9 @@ onSubmit(){
   if(this.userForm.valid){
     const formData=this.userForm.value;
     this.userRegisterService.adduser(formData).subscribe(
-      (response) =>{console.log(response)
+      (response) =>{
+        this.user = response
+        this.userForm.reset()
       
       }
     )
