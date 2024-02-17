@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AddusermodalComponent } from './addusermodal/addusermodal.component';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +28,7 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
     AppRoutingModule,
     BrowserAnimationsModule, 
     ReactiveFormsModule,
+    HttpClientModule
    
   ],
   providers: [
