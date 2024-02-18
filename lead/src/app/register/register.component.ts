@@ -36,29 +36,15 @@ export class RegisterComponent implements OnInit {
 
     }
 
-//  onSubmit() {
-//           if (this.userForm.valid) {
 
-//             console.log(this.userForm.value);
-            
-//           } else {
-            
-//             console.log('Form is invalid');
-//           }
-//         }
-//         resetForm(){
-
-// this.userForm.reset();
-
-//         }
-
+// Submitting the form
 onSubmit(){
   if(this.userForm.valid){
     const formData=this.userForm.value;
     this.userRegisterService.adduser(formData).subscribe(
       (response) =>{
         this.user = response
-        this.userForm.reset()
+        this.userForm.reset() // Reseting form after submiting
       
       }
     )
@@ -66,31 +52,6 @@ onSubmit(){
 
 }
 
-
-
-
-// onSubmit() {
-//   if (this.userForm.valid) {
-//     const userData: User = this.userForm.value;
-//     this.userRegisterService.adduser(userData);
-//     this.userForm.reset();
-//   } else {
-//     console.log('Form is invalid');
-//   }
-// }
-
-
-
-
-
-// onSubmit() {
-//   if (this.userForm.valid) {
-//     this. userregisterService.setUserData(this.userForm.value);
-//     console.log('Form submitted successfully');
-//     this.userForm.reset(); // Optionally reset the form after submission
-//   } else {
-//     console.log('Form is invalid');
-//   }
 }
 
 
