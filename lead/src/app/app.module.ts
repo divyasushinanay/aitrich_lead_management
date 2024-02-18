@@ -13,6 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AddusermodalComponent } from './addusermodal/addusermodal.component';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,8 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule, 
     ReactiveFormsModule,
-    HttpClientModule
-   
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     MatDialog
