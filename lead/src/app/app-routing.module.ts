@@ -6,19 +6,14 @@ import { ProfileComponent } from './profile/profile.component';
 import { UsermanagementComponent } from './usermanagement/usermanagement.component';
 
 const routes: Routes = [
-  {path:'',component:DashboardComponent},
- 
- {path:'dashboard',component:DashboardComponent},
-  { path: 'register', component: RegisterComponent},
-  { path: 'Profile', component: ProfileComponent},
-
-  {path:'usermanagement', component:UsermanagementComponent},
-
-
+  { path: '', component: DashboardComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'Profile', component: ProfileComponent },
+  { path: 'usermanagement', component: UsermanagementComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
